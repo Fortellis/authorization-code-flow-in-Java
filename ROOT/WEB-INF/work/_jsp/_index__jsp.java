@@ -76,14 +76,18 @@ if (docApp != null) {
 
     out.write(_jsp_string1, 0, _jsp_string1.length);
     
-String client_id = "bynP4VHK8RGZPGHSNTdSGyCd7315g2vz";
+String client_id = "KegwQ6AHioQyu8iK6a2KoAbrLZL4rQJD";
 String redirect_uri = "http://localhost:8080/";
 
     out.write(_jsp_string2, 0, _jsp_string2.length);
-    out.print(( client_id ));
+    out.print(( client_id));
     out.write(_jsp_string3, 0, _jsp_string3.length);
-    out.print(( redirect_uri ));
+    out.print(( redirect_uri));
     out.write(_jsp_string4, 0, _jsp_string4.length);
+    out.print(( request.getParameter("code")));
+    out.write(_jsp_string5, 0, _jsp_string5.length);
+    out.print(( request.getParameter("code")));
+    out.write(_jsp_string6, 0, _jsp_string6.length);
   }
 
   private com.caucho.make.DependencyContainer _caucho_depends
@@ -143,7 +147,7 @@ String redirect_uri = "http://localhost:8080/";
     String resourcePath = loader.getResourcePathSpecificFirst();
     mergePath.addClassPath(resourcePath);
     com.caucho.vfs.Depend depend;
-    depend = new com.caucho.vfs.Depend(appDir.lookup("index.jsp"), -1244464189885847188L, false);
+    depend = new com.caucho.vfs.Depend(appDir.lookup("index.jsp"), 6218242720669122326L, false);
     _caucho_depends.add(depend);
     loader.addDependency(depend);
   }
@@ -176,16 +180,20 @@ String redirect_uri = "http://localhost:8080/";
     }
   }
 
+  private final static char []_jsp_string5;
   private final static char []_jsp_string3;
-  private final static char []_jsp_string4;
+  private final static char []_jsp_string2;
+  private final static char []_jsp_string6;
   private final static char []_jsp_string0;
   private final static char []_jsp_string1;
-  private final static char []_jsp_string2;
+  private final static char []_jsp_string4;
   static {
+    _jsp_string5 = "\r\n\r\n<form action=\"Main\" method=\"POST\">\r\n  <p>This is the button to get your token.</p>\r\n  <input type=\"text\" name=\"authorizationCode\" value=".toCharArray();
     _jsp_string3 = "&redirect_uri=".toCharArray();
-    _jsp_string4 = "&nonce=nonce&scope=openid&state=state\">Get Token</a>\r\n\r\n</body>\r\n\r\n</html>\r\n".toCharArray();
+    _jsp_string2 = "\r\n<html>\r\n<head><title>Resin&#174; Default Home Page</title></head>\r\n\r\n<body>\r\n\r\n<p>Use this button to get your authorization code.</p>\r\n<a href=\"https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/authorize?response_type=code&client_id=".toCharArray();
+    _jsp_string6 = "></input>\r\n  <input type=\"submit\" value=\"Get Token\"></input>\r\n</form>\r\n\r\n</body>\r\n\r\n</html>\r\n".toCharArray();
     _jsp_string0 = "\r\n\r\n\r\n\r\n".toCharArray();
     _jsp_string1 = "\r\n".toCharArray();
-    _jsp_string2 = "\r\n\r\n<html>\r\n<head><title>Resin&#174; Default Home Page</title></head>\r\n\r\n<body>\r\n\r\n<p>This is the link to get your token.</p>\r\n<a href=\"https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/authorize?response_type=token&client_id=".toCharArray();
+    _jsp_string4 = "&nonce=nonce&scope=openid&state=state\">Get Your Authorization Code</a>\r\n\r\n<p>This is your authorization code:</p>\r\n".toCharArray();
   }
 }
