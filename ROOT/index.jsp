@@ -30,7 +30,7 @@ if (docApp != null) {
 }
 %>
 <%
-String client_id = "KegwQ6AHioQyu8iK6a2KoAbrLZL4rQJD";
+String client_id = "{yourAPIKey}";
 String redirect_uri = "http://localhost:8080/";
 %>
 <html>
