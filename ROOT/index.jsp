@@ -39,7 +39,7 @@ String redirect_uri = "http://localhost:8080/";
 <body>
 
 <p>Use this button to get your authorization code.</p>
-<a href="https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/authorize?response_type=code&client_id=<%= client_id%>&redirect_uri=<%= redirect_uri%>&nonce=nonce&scope=openid&state=state">Get Your Authorization Code</a>
+<a href="https://identity.fortellis.io/oauth2/aus1p1ixy7YL8cMq02p7/v1/authorize?response_type=code&client_id=<%= client_id%>&redirect_uri=<%= redirect_uri%>&nonce=nonce&scope=openid&state=state">Get Your Authorization Code</a>
 
 <p>This is your authorization code:</p>
 <%= request.getParameter("code")%>

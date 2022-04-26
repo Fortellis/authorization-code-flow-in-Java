@@ -26,12 +26,12 @@ public class Main extends HttpServlet{
         PrintWriter out = response.getWriter();
         String authorizationCode = request.getParameter("authorizationCode");
         System.out.println("This is your authorizationCode" + authorizationCode);
-        URL url = new URL("https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/token");
+        URL url = new URL("https://identity.fortellis.io/oauth2/aus1p1ixy7YL8cMq02p7/v1/token");
         String postData = "grant_type=authorization_code&redirect_uri=http://localhost:8080/&code=" + authorizationCode;
  
         URLConnection conn = url.openConnection();
         conn.setDoOutput(true);
-        conn.setRequestProperty("Authorization", "Basic S2Vnd1E2QUhpb1F5dThpSzZhMktvQWJyTFpMNHJRSkQ6b0FoVEV4NFFmSHQzSmRQdw==");
+        conn.setRequestProperty("Authorization", "Basic yourBase64Encoded{yourAPIKey:yourAPISecret}");
         conn.setRequestProperty("Accept", "application/json");
         conn.setRequestProperty("Cache-Control", "no-cache");
         conn.setRequestProperty("Content-Length", Integer.toString(postData.length()));
